@@ -17,7 +17,8 @@
         <h3>Employee Directory</h3>
         <hr>
         <p class="h4 mb-4">Please fill out the form below to add a new employee to the database.</p>
-        <form action="#" th:action="@{/employees/addEmployee}" th:object="${employee}" method="post">
+        <form action="#" th:action="@{/employees/save}" th:object="${employee}" method="post">
+            <input type="hidden" th:field="*{id}">
             <div class="form-group row mb-4">
                 <label for="firstName" class="col-sm-2 col-form-label">First Name:</label>
                 <div class="col-sm-10">
