@@ -19,6 +19,7 @@ public class CustomerController {
 	public void initBinder(WebDataBinder binder) {
 		StringTrimmerEditor stringTrimmerEditor = new StringTrimmerEditor(true);
 		binder.registerCustomEditor(String.class, stringTrimmerEditor);
+		binder.registerCustomEditor(Integer.class, stringTrimmerEditor);
 	}
 
 	@GetMapping("/customerForm")
