@@ -19,7 +19,7 @@ public class CustomerController {
 	public void initBinder(WebDataBinder binder) {
 		StringTrimmerEditor stringTrimmerEditor = new StringTrimmerEditor(true);
 		binder.registerCustomEditor(String.class, stringTrimmerEditor);
-		binder.registerCustomEditor(Integer.class, stringTrimmerEditor);
+//		binder.registerCustomEditor(Integer.class, stringTrimmerEditor);
 	}
 
 	@GetMapping("/customerForm")
@@ -31,6 +31,7 @@ public class CustomerController {
 	@PostMapping("/submitCustomer")
 	public String submitForm(@Valid @ModelAttribute("customer") Customer customer, BindingResult result) {
 		if (result.hasErrors()) {
+			System.err.println("Binding result has errors: " + result);
 			return "customer-form"; // Returns to form if there are validation errors
 		}
 		return "redirect:/success"; // Redirects to success page if validation passes
