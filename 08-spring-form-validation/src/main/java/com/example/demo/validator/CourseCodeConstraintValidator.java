@@ -19,6 +19,6 @@ public class CourseCodeConstraintValidator implements ConstraintValidator<Course
 		if (coursePrefix != null) {
 			return coursePrefix.startsWith(this.coursePrefix);
 		}
-		return true;
+		return false;
 	}
 }

@@ -1,5 +1,6 @@
 package com.example.demo.model;
 
+import com.example.demo.annotation.CourseCode;
 import jakarta.validation.constraints.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -23,4 +24,7 @@ public class Customer {
 
 	@Pattern(regexp = "^\\d{11}$", message = "Phone number must be 11 characters long and contain only numbers")
 	private String phoneNumber;
+
+	@CourseCode
+	private String courseCode;
 }

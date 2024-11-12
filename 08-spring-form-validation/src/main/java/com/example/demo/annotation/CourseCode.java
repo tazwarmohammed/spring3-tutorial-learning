@@ -15,7 +15,7 @@ import java.lang.annotation.Target;
 public @interface CourseCode {
 
 	public String value() default "CSE";
-	public String message() default "Must start with CSE";
+	public String message() default "Must start with 'CSE'";
 	public Class<?>[] groups() default {};
 	public Class<? extends Payload>[] payload() default {};
 }

@@ -39,6 +39,14 @@
                   class="text-red-500 text-sm"></span>
         </div>
 
+        <div>
+            <label for="phoneNumber" class="block text-gray-600 font-medium mb-1">Course Code</label>
+            <input type="text" id="courseCode" th:field="*{courseCode}"
+                   class="w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"/>
+            <span th:if="${#fields.hasErrors('courseCode')}" th:errors="*{courseCode}"
+                  class="text-red-500 text-sm"></span>
+        </div>
+
         <button type="submit" class="w-full bg-blue-500 text-white font-semibold py-2 rounded hover:bg-blue-600 transition-colors">
             Submit
         </button>
